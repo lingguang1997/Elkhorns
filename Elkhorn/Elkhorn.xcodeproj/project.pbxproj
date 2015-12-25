@@ -176,15 +176,23 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		CE9976CD1C2D584300C2E688 = {
+		CE8BA1891C2D8CA2009CAD86 /* Libs */ = {
 			isa = PBXGroup;
 			children = (
 				CE1F81E51C2D5F2C007B4C57 /* AFNetworking.framework */,
 				CE1F81E61C2D5F2C007B4C57 /* libAppKit.a */,
+			);
+			name = Libs;
+			sourceTree = "<group>";
+		};
+		CE9976CD1C2D584300C2E688 = {
+			isa = PBXGroup;
+			children = (
 				CE9976D81C2D584300C2E688 /* Elkhorn */,
 				CE9976F21C2D584300C2E688 /* ElkhornTests */,
 				CE9976FD1C2D584300C2E688 /* ElkhornUITests */,
 				CE9976D71C2D584300C2E688 /* Products */,
+				CE8BA1891C2D8CA2009CAD86 /* Libs */,
 			);
 			sourceTree = "<group>";
 		};
