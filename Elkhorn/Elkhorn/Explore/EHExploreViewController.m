@@ -6,6 +6,7 @@
 //  Copyright © 2015 Zijiao Liu. All rights reserved.
 //
 
+#import <AppKit/AKStream.h>
 #import "EHExploreViewController.h"
 
 @implementation EHExploreViewController
@@ -19,6 +20,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor redColor];
+}
+
+# pragma mark - AKStream
+
+- (void)streamDidUpdate {
+    [super streamDidUpdate];
 }
 
 # pragma mark - Helpers
