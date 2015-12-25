@@ -12,6 +12,24 @@
 		CE1F81E81C2D5F2C007B4C57 /* libAppKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1F81E61C2D5F2C007B4C57 /* libAppKit.a */; };
 		CE1F81EB1C2D61F1007B4C57 /* AKHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F81E91C2D61F1007B4C57 /* AKHttpClient.m */; };
 		CE1F81F31C2D63D5007B4C57 /* UIColor+App.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F81F21C2D63D5007B4C57 /* UIColor+App.m */; };
+		CE8BA16D1C2D7272009CAD86 /* EHExploreMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */; };
+		CE8BA16E1C2D7272009CAD86 /* EHExploreMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */; };
+		CE8BA16F1C2D7272009CAD86 /* EHExploreMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */; };
+		CE8BA1721C2D7668009CAD86 /* EHExploreEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1711C2D7668009CAD86 /* EHExploreEvent.m */; };
+		CE8BA1731C2D7668009CAD86 /* EHExploreEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1711C2D7668009CAD86 /* EHExploreEvent.m */; };
+		CE8BA1741C2D7668009CAD86 /* EHExploreEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1711C2D7668009CAD86 /* EHExploreEvent.m */; };
+		CE8BA1771C2D7869009CAD86 /* EHExploreRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1761C2D7869009CAD86 /* EHExploreRecipe.m */; };
+		CE8BA1781C2D7869009CAD86 /* EHExploreRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1761C2D7869009CAD86 /* EHExploreRecipe.m */; };
+		CE8BA1791C2D7869009CAD86 /* EHExploreRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1761C2D7869009CAD86 /* EHExploreRecipe.m */; };
+		CE8BA17C1C2D78FC009CAD86 /* EHMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA17B1C2D78FC009CAD86 /* EHMeal.m */; };
+		CE8BA17D1C2D78FC009CAD86 /* EHMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA17B1C2D78FC009CAD86 /* EHMeal.m */; };
+		CE8BA17E1C2D78FC009CAD86 /* EHMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA17B1C2D78FC009CAD86 /* EHMeal.m */; };
+		CE8BA1811C2D7BFB009CAD86 /* EHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */; };
+		CE8BA1821C2D7BFB009CAD86 /* EHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */; };
+		CE8BA1831C2D7BFB009CAD86 /* EHEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */; };
+		CE8BA1861C2D8B21009CAD86 /* EHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */; };
+		CE8BA1871C2D8B21009CAD86 /* EHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */; };
+		CE8BA1881C2D8B21009CAD86 /* EHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */; };
 		CE9976DB1C2D584300C2E688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9976DA1C2D584300C2E688 /* main.m */; };
 		CE9976DE1C2D584300C2E688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9976DD1C2D584300C2E688 /* AppDelegate.m */; };
 		CE9976E11C2D584300C2E688 /* EHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9976E01C2D584300C2E688 /* EHMainViewController.m */; };
@@ -47,6 +65,18 @@
 		CE1F81EA1C2D61F1007B4C57 /* AKHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKHttpClient.h; sourceTree = "<group>"; };
 		CE1F81F11C2D63D5007B4C57 /* UIColor+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+App.h"; sourceTree = "<group>"; };
 		CE1F81F21C2D63D5007B4C57 /* UIColor+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+App.m"; sourceTree = "<group>"; };
+		CE8BA16B1C2D7272009CAD86 /* EHExploreMeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreMeal.h; sourceTree = "<group>"; };
+		CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreMeal.m; sourceTree = "<group>"; };
+		CE8BA1701C2D7668009CAD86 /* EHExploreEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreEvent.h; sourceTree = "<group>"; };
+		CE8BA1711C2D7668009CAD86 /* EHExploreEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreEvent.m; sourceTree = "<group>"; };
+		CE8BA1751C2D7869009CAD86 /* EHExploreRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreRecipe.h; sourceTree = "<group>"; };
+		CE8BA1761C2D7869009CAD86 /* EHExploreRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreRecipe.m; sourceTree = "<group>"; };
+		CE8BA17A1C2D78FC009CAD86 /* EHMeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHMeal.h; sourceTree = "<group>"; };
+		CE8BA17B1C2D78FC009CAD86 /* EHMeal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHMeal.m; sourceTree = "<group>"; };
+		CE8BA17F1C2D7BFB009CAD86 /* EHEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEvent.h; sourceTree = "<group>"; };
+		CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEvent.m; sourceTree = "<group>"; };
+		CE8BA1841C2D8B21009CAD86 /* EHRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRecipe.h; sourceTree = "<group>"; };
+		CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRecipe.m; sourceTree = "<group>"; };
 		CE9976D61C2D584300C2E688 /* Elkhorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elkhorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9976DA1C2D584300C2E688 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE9976DC1C2D584300C2E688 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +157,25 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		CE8BA16A1C2D71E1009CAD86 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CE8BA16B1C2D7272009CAD86 /* EHExploreMeal.h */,
+				CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */,
+				CE8BA1701C2D7668009CAD86 /* EHExploreEvent.h */,
+				CE8BA1711C2D7668009CAD86 /* EHExploreEvent.m */,
+				CE8BA1751C2D7869009CAD86 /* EHExploreRecipe.h */,
+				CE8BA1761C2D7869009CAD86 /* EHExploreRecipe.m */,
+				CE8BA17A1C2D78FC009CAD86 /* EHMeal.h */,
+				CE8BA17B1C2D78FC009CAD86 /* EHMeal.m */,
+				CE8BA17F1C2D7BFB009CAD86 /* EHEvent.h */,
+				CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */,
+				CE8BA1841C2D8B21009CAD86 /* EHRecipe.h */,
+				CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
 		CE9976CD1C2D584300C2E688 = {
 			isa = PBXGroup;
 			children = (
@@ -152,6 +201,7 @@
 		CE9976D81C2D584300C2E688 /* Elkhorn */ = {
 			isa = PBXGroup;
 			children = (
+				CE8BA16A1C2D71E1009CAD86 /* Modules */,
 				CE1F81DF1C2D5EA3007B4C57 /* Utils */,
 				CE1F81E11C2D5EA3007B4C57 /* Explore */,
 				CE9976DC1C2D584300C2E688 /* AppDelegate.h */,
@@ -322,11 +372,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE9976E11C2D584300C2E688 /* EHMainViewController.m in Sources */,
+				CE8BA1721C2D7668009CAD86 /* EHExploreEvent.m in Sources */,
 				CE1F81F31C2D63D5007B4C57 /* UIColor+App.m in Sources */,
 				CE9976DE1C2D584300C2E688 /* AppDelegate.m in Sources */,
+				CE8BA1811C2D7BFB009CAD86 /* EHEvent.m in Sources */,
 				CE9976DB1C2D584300C2E688 /* main.m in Sources */,
+				CE8BA16D1C2D7272009CAD86 /* EHExploreMeal.m in Sources */,
 				CE1F81EB1C2D61F1007B4C57 /* AKHttpClient.m in Sources */,
+				CE8BA17C1C2D78FC009CAD86 /* EHMeal.m in Sources */,
 				CE1F81E41C2D5ED0007B4C57 /* EHExploreViewController.m in Sources */,
+				CE8BA1861C2D8B21009CAD86 /* EHRecipe.m in Sources */,
+				CE8BA1771C2D7869009CAD86 /* EHExploreRecipe.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +390,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8BA1781C2D7869009CAD86 /* EHExploreRecipe.m in Sources */,
+				CE8BA1871C2D8B21009CAD86 /* EHRecipe.m in Sources */,
+				CE8BA1821C2D7BFB009CAD86 /* EHEvent.m in Sources */,
 				CE9976F41C2D584300C2E688 /* ElkhornTests.m in Sources */,
+				CE8BA17D1C2D78FC009CAD86 /* EHMeal.m in Sources */,
+				CE8BA1731C2D7668009CAD86 /* EHExploreEvent.m in Sources */,
+				CE8BA16E1C2D7272009CAD86 /* EHExploreMeal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +404,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE8BA1791C2D7869009CAD86 /* EHExploreRecipe.m in Sources */,
+				CE8BA1881C2D8B21009CAD86 /* EHRecipe.m in Sources */,
+				CE8BA1831C2D7BFB009CAD86 /* EHEvent.m in Sources */,
 				CE9976FF1C2D584300C2E688 /* ElkhornUITests.m in Sources */,
+				CE8BA17E1C2D78FC009CAD86 /* EHMeal.m in Sources */,
+				CE8BA1741C2D7668009CAD86 /* EHExploreEvent.m in Sources */,
+				CE8BA16F1C2D7272009CAD86 /* EHExploreMeal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
