@@ -1,0 +1,6 @@
+[submodule "Submodules/AppKit"]
+	path = Submodules/AppKit
+	url = https://github.com/lingguang1997/AppKit.git
+[submodule "Submodules/AFNetworking"]
+	path = Submodules/AFNetworking
+	url = https://github.com/AFNetworking/AFNetworking.git
