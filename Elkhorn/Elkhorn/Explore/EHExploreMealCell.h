@@ -19,7 +19,7 @@ extern  NSString * __nonnull const EHMealImageURLKey;
 @property (nonatomic, readonly, nonnull) UIImageView *profileImageView;
 @property (nonatomic, readonly, nonnull) UILabel *userActionLabel;
 @property (nonatomic, readonly, nonnull) UILabel *mealsSharedlabel;
-@property (nonatomic, readonly, nonnull) UIImageView *topBarBackgroundImageView;
+@property (nonatomic, readonly, nonnull) UIVisualEffectView *topBarBackgroundView;
 @property (nonatomic, readonly, nonnull) UIImageView *mealImageView;
 @property (nonatomic, readonly, nonnull) UILabel *mealTitleLabel;
 @property (nonatomic, readonly, nonnull) UILabel *pickUpDateLabel;
@@ -27,7 +27,7 @@ extern  NSString * __nonnull const EHMealImageURLKey;
 @property (nonatomic, readonly, nonnull) UIButton *favButton;
 @property (nonatomic, readonly, nonnull) UIButton *commentButton;
 @property (nonatomic, readonly, nonnull) UIButton *shareButton;
-@property (nonatomic, readonly, nonnull) UIImageView *bottomBarBackgroundImageView;
+@property (nonatomic, readonly, nonnull) UIVisualEffectView *bottomBarBackgroundView;
 
 + (CGFloat)heightForItem:(nonnull EHExploreMeal *)meal;
 - (void)updateWithItem:(nonnull EHExploreMeal *)meal;

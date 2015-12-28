@@ -32,7 +32,7 @@
 }
 
 + (instancetype)mockObject {
-    EHExploreMeal *meal = [[EHExploreMeal alloc] initWithProfileImageURL:@"" username:@"Zijiao Liu" numberOfMealsShared:10 mealImageURL:@"" mealTitle:@"Chicken over Rice" pickUpDate:@"Monday, Jul 4" numberOfLeftMeals:@"7"];
+    EHExploreMeal *meal = [[EHExploreMeal alloc] initWithProfileImageURL:@"" username:@"白素贞" numberOfMealsShared:10 mealImageURL:@"" mealTitle:@"Chicken over Rice" pickUpDate:@"Monday, Jul 4" numberOfLeftMeals:@"7"];
     return meal;
 }
 

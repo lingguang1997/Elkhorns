@@ -13,8 +13,8 @@
 NSString * const EHProfileImageURLKey = @"EHProfileImageURLKey";
 NSString * const EHMealImageURLKey = @"EHMealImageURLKey";
 
-static CGFloat const kBarBackgroundImageViewHeight = 60;
-static CGFloat const kMealImageViewHeight = 300;
+static CGFloat const kBarBackgroundViewHeight = 60;
+static CGFloat const kMealImageViewHeight = 420;
 static CGFloat const kProfileImageViewDimension = 40;
 static CGFloat const kProfileImageViewVPadding = 10;
 static CGFloat const kProfileImageViewHPadding = 12;
@@ -27,23 +27,6 @@ static CGFloat const kLeftMealsLabelHPadding = 20;
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
 
-        _topBarBackgroundImageView = [UIImageView new];
-        [self.contentView addSubview:_topBarBackgroundImageView];
-
-        _profileImageView = [UIImageView new];
-        _profileImageView.layer.cornerRadius = kProfileImageViewDimension / 2;
-        _profileImageView.layer.borderWidth = 2;
-        _profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
-        [_topBarBackgroundImageView addSubview:_profileImageView];
-
-        _userActionLabel = [UILabel new];
-        _userActionLabel.textColor = [UIColor whiteColor];
-        [_topBarBackgroundImageView addSubview:_userActionLabel];
-
-        _mealsSharedlabel = [UILabel new];
-        _mealsSharedlabel.textColor = [UIColor whiteColor];
-        [_topBarBackgroundImageView addSubview:_mealsSharedlabel];
-
         _mealImageView = [UIImageView new];
         [self.contentView addSubview:_mealImageView];
 
@@ -55,24 +38,43 @@ static CGFloat const kLeftMealsLabelHPadding = 20;
         _pickUpDateLabel.textColor = [UIColor whiteColor];
         [_mealImageView addSubview:_pickUpDateLabel];
 
-        _bottomBarBackgroundImageView = [UIImageView new];
-        [self.contentView addSubview:_bottomBarBackgroundImageView];
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _topBarBackgroundView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [self.contentView addSubview:_topBarBackgroundView];
+
+        _profileImageView = [UIImageView new];
+        _profileImageView.layer.cornerRadius = kProfileImageViewDimension / 2;
+        _profileImageView.layer.borderWidth = 2;
+        _profileImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+        _profileImageView.clipsToBounds = YES;
+        [_topBarBackgroundView addSubview:_profileImageView];
+
+        _userActionLabel = [UILabel new];
+        _userActionLabel.textColor = [UIColor whiteColor];
+        [_topBarBackgroundView addSubview:_userActionLabel];
+
+        _mealsSharedlabel = [UILabel new];
+        _mealsSharedlabel.textColor = [UIColor whiteColor];
+        [_topBarBackgroundView addSubview:_mealsSharedlabel];
+
+        _bottomBarBackgroundView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [self.contentView addSubview:_bottomBarBackgroundView];
 
         _leftMealLabel = [UILabel new];
         _leftMealLabel.textColor = [UIColor whiteColor];
-        [_bottomBarBackgroundImageView addSubview:_leftMealLabel];
+        [_bottomBarBackgroundView addSubview:_leftMealLabel];
 
         _favButton = [UIButton new];
         [_favButton addTarget:self action:@selector(_favButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_bottomBarBackgroundImageView addSubview:_favButton];
+        [_bottomBarBackgroundView addSubview:_favButton];
 
         _commentButton = [UIButton new];
         [_commentButton addTarget:self action:@selector(_commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_bottomBarBackgroundImageView addSubview:_commentButton];
+        [_bottomBarBackgroundView addSubview:_commentButton];
 
         _shareButton = [UIButton new];
         [_shareButton addTarget:self action:@selector(_shareButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_bottomBarBackgroundImageView addSubview:_shareButton];
+        [_bottomBarBackgroundView addSubview:_shareButton];
 
         self.contentView.backgroundColor = [UIColor greenColor];
     }
@@ -83,23 +85,23 @@ static CGFloat const kLeftMealsLabelHPadding = 20;
     [super layoutSubviews];
 
     CGFloat canvasWith = CGRectGetWidth(self.bounds);
-    _topBarBackgroundImageView.frame = CGRectMake(0, 0, canvasWith, kBarBackgroundImageViewHeight);
+    _topBarBackgroundView.frame = CGRectMake(0, 0, canvasWith, kBarBackgroundViewHeight);
     _profileImageView.frame = CGRectMake(kProfileImageViewHPadding, kProfileImageViewVPadding, kProfileImageViewDimension, kProfileImageViewDimension);
     // should check
     _userActionLabel.frame = CGRectMake(CGRectGetMaxX(_profileImageView.frame) + kProfileImageViewHPadding, kProfileImageViewVPadding, canvasWith - CGRectGetMaxX(_profileImageView.frame) - kProfileImageViewHPadding * 2, 50);
     _mealsSharedlabel.frame = CGRectMake(CGRectGetMinX(_userActionLabel.frame), CGRectGetMaxY(_userActionLabel.frame), CGRectGetWidth(_userActionLabel.frame), 50);
     
-    _mealImageView.frame = CGRectMake(0, CGRectGetMaxY(_topBarBackgroundImageView.frame), canvasWith, kMealImageViewHeight);
+    _mealImageView.frame = CGRectMake(0, 0, canvasWith, kMealImageViewHeight);
     // should check
     _mealTitleLabel.frame = CGRectMake(kProfileImageViewHPadding, 0, canvasWith - kProfileImageViewHPadding * 2, 50);
     _pickUpDateLabel.frame = CGRectMake(kProfileImageViewHPadding, CGRectGetMaxY(_mealTitleLabel.frame), CGRectGetWidth(_mealTitleLabel.frame), 50);
 
-    _bottomBarBackgroundImageView.frame = CGRectMake(0, CGRectGetMaxY(_mealImageView.frame), canvasWith, kBarBackgroundImageViewHeight);
+    _bottomBarBackgroundView.frame = CGRectMake(0, kMealImageViewHeight - kBarBackgroundViewHeight, canvasWith, kBarBackgroundViewHeight);
     _leftMealLabel.frame = CGRectMake(kLeftMealsLabelHPadding, kProfileImageViewVPadding, 50, 50);
 }
 
 + (CGFloat)heightForItem:(EHExploreMeal *)meal {
-    return kBarBackgroundImageViewHeight * 2 + kMealImageViewHeight;
+    return kMealImageViewHeight;
 }
 
 - (void)updateWithItem:(EHExploreMeal *)meal {
@@ -110,6 +112,8 @@ static CGFloat const kLeftMealsLabelHPadding = 20;
     _mealTitleLabel.text = meal.mealTitle;
     _pickUpDateLabel.text = meal.pickUpDate;
     _leftMealLabel.text = meal.numberOfLeftMeals;
+    _profileImageView.image = [UIImage imageNamed:@"User"];
+    _mealImageView.image = [UIImage imageNamed:@"Food"];
     [self setNeedsLayout];
 }
 
