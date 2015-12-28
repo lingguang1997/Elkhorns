@@ -12,7 +12,12 @@
 extern  NSString * __nonnull const EHProfileImageURLKey;
 extern  NSString * __nonnull const EHMealImageURLKey;
 
+@interface EHMealView : UIView
+
+@end
+
 
 @interface EHExploreMealCell : UITableViewCell <AKTableViewCell>
 
 @end
+

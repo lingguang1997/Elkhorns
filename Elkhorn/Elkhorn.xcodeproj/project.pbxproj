@@ -199,8 +199,8 @@
 		CE46E8461C317A920075CA29 /* Meal */ = {
 			isa = PBXGroup;
 			children = (
-				CE46E8471C317AC10075CA29 /* EHMealViewController.m */,
 				CE46E8481C317AC10075CA29 /* EHMealViewController.h */,
+				CE46E8471C317AC10075CA29 /* EHMealViewController.m */,
 			);
 			path = Meal;
 			sourceTree = "<group>";

@@ -24,12 +24,8 @@ static CGFloat const kLeftMealsLabelWidth = 100;
 static CGFloat const kBtnDimension = 25;
 static CGFloat const kBtnHPadding = 30;
 
-@interface EHExploreMealCell ()
+@interface EHMealView ()
 
-@property (nonatomic, nonnull) UIImageView *profileImageView;
-@property (nonatomic, nonnull) UILabel *userActionLabel;
-@property (nonatomic, nonnull) UILabel *mealsSharedlabel;
-@property (nonatomic, nonnull) UIVisualEffectView *topBarBackgroundView;
 @property (nonatomic, nonnull) UIImageView *mealImageView;
 @property (nonatomic, nonnull) UILabel *mealTitleLabel;
 @property (nonatomic, nonnull) UILabel *pickUpDateLabel;
@@ -43,6 +39,101 @@ static CGFloat const kBtnHPadding = 30;
 @end
 
 
+@implementation EHMealView
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        _mealImageView = [UIImageView new];
+        [self addSubview:_mealImageView];
+        
+        _maskImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Mask"]];
+        [_mealImageView addSubview:_maskImageView];
+        
+        _mealTitleLabel = [UILabel new];
+        _mealTitleLabel.textColor = [UIColor whiteColor];
+        _mealTitleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:17];
+        [_mealImageView addSubview:_mealTitleLabel];
+        
+        _pickUpDateLabel = [UILabel new];
+        _pickUpDateLabel.textColor = [UIColor whiteColor];
+        _pickUpDateLabel.font = [UIFont fontWithName:@"Avenir-Light" size:13];
+        [_mealImageView addSubview:_pickUpDateLabel];
+
+        UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+        _bottomBarBackgroundView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
+        [self addSubview:_bottomBarBackgroundView];
+        
+        _leftMealLabel = [UILabel new];
+        _leftMealLabel.textColor = [UIColor whiteColor];
+        _leftMealLabel.font = [UIFont fontWithName:@"Avenir-Book" size:15];
+        [_bottomBarBackgroundView addSubview:_leftMealLabel];
+        
+        _favButton = [UIButton new];
+        [_favButton setImage:[UIImage imageNamed:@"FavIcon"] forState:UIControlStateNormal];
+        [_favButton addTarget:self action:@selector(_favButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_bottomBarBackgroundView addSubview:_favButton];
+        
+        _commentButton = [UIButton new];
+        [_commentButton setImage:[UIImage imageNamed:@"CommentIcon"] forState:UIControlStateNormal];
+        [_commentButton addTarget:self action:@selector(_commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_bottomBarBackgroundView addSubview:_commentButton];
+        
+        _shareButton = [UIButton new];
+        [_shareButton setImage:[UIImage imageNamed:@"FlowerIcon"] forState:UIControlStateNormal];
+        [_shareButton addTarget:self action:@selector(_shareButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_bottomBarBackgroundView addSubview:_shareButton];
+    }
+    return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
+    CGFloat canvasWidth = CGRectGetWidth(self.bounds);
+
+    _mealImageView.frame = self.bounds;
+
+    _bottomBarBackgroundView.frame = CGRectMake(0, kMealImageViewHeight - kBarBackgroundViewHeight, canvasWidth, kBarBackgroundViewHeight);
+    _maskImageView.frame = CGRectMake(0, CGRectGetMinY(_bottomBarBackgroundView.frame) - kBarBackgroundViewHeight, canvasWidth, kBarBackgroundViewHeight);
+
+    _pickUpDateLabel.frame = CGRectMake(kProfileImageViewHPadding, CGRectGetMinY(_bottomBarBackgroundView.frame) - kActionLabelHeight - kProfileImageViewVPadding, canvasWidth - kProfileImageViewHPadding * 2, kActionLabelHeight);
+    _mealTitleLabel.frame = CGRectMake(kProfileImageViewHPadding, CGRectGetMidY(_pickUpDateLabel.frame) - kActionLabelHeight - kProfileImageViewVPadding, CGRectGetWidth(_pickUpDateLabel.frame), kActionLabelHeight);
+    _leftMealLabel.frame = CGRectMake(kLeftMealsLabelHPadding, (kBarBackgroundViewHeight - kActionLabelHeight) / 2, kLeftMealsLabelWidth, kActionLabelHeight);
+
+    _shareButton.frame = CGRectMake(canvasWidth - kProfileImageViewHPadding - kBtnDimension, (kBarBackgroundViewHeight - kBtnDimension) / 2, kBtnDimension, kBtnDimension);
+    _commentButton.frame = CGRectMake(CGRectGetMinX(_shareButton.frame) - kBtnDimension - kBtnHPadding, CGRectGetMinY(_shareButton.frame), kBtnDimension, kBtnDimension);
+    _favButton.frame = CGRectMake(CGRectGetMinX(_commentButton.frame) - kBtnDimension - kBtnHPadding, CGRectGetMinY(_commentButton.frame), kBtnDimension, kBtnDimension);
+}
+
+# pragma mark - Private methods
+
+- (void)_favButtonClicked:(UIButton *)button {
+    NSLog(@"faved");
+}
+
+- (void) _commentButtonClicked:(UIButton *)button {
+    NSLog(@"commented");
+}
+
+- (void)_shareButtonClicked:(UIButton *)button {
+    NSLog(@"shared");
+}
+
+@end
+
+
+@interface EHExploreMealCell ()
+
+@property (nonatomic, nonnull) UIImageView *profileImageView;
+@property (nonatomic, nonnull) UILabel *userActionLabel;
+@property (nonatomic, nonnull) UILabel *mealsSharedlabel;
+@property (nonatomic, nonnull) UIVisualEffectView *topBarBackgroundView;
+@property (nonatomic, nonnull) EHMealView *mealView;
+
+@end
+
+
 @implementation EHExploreMealCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
@@ -50,22 +141,9 @@ static CGFloat const kBtnHPadding = 30;
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
 
-        _mealImageView = [UIImageView new];
-        [self.contentView addSubview:_mealImageView];
-
-        _maskImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Mask"]];
-        [_mealImageView addSubview:_maskImageView];
-
-        _mealTitleLabel = [UILabel new];
-        _mealTitleLabel.textColor = [UIColor whiteColor];
-        _mealTitleLabel.font = [UIFont fontWithName:@"Avenir-Medium" size:17];
-        [_mealImageView addSubview:_mealTitleLabel];
-
-        _pickUpDateLabel = [UILabel new];
-        _pickUpDateLabel.textColor = [UIColor whiteColor];
-        _pickUpDateLabel.font = [UIFont fontWithName:@"Avenir-Light" size:13];
-        [_mealImageView addSubview:_pickUpDateLabel];
-
+        _mealView = [EHMealView new];
+        [self.contentView addSubview:_mealView];
+        
         UIBlurEffect *blurEffect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
         _topBarBackgroundView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
         [self.contentView addSubview:_topBarBackgroundView];
@@ -86,29 +164,6 @@ static CGFloat const kBtnHPadding = 30;
         _mealsSharedlabel.font = [UIFont fontWithName:@"Avenir-Light" size:12];
         [_topBarBackgroundView addSubview:_mealsSharedlabel];
 
-        _bottomBarBackgroundView = [[UIVisualEffectView alloc] initWithEffect:blurEffect];
-        [self.contentView addSubview:_bottomBarBackgroundView];
-
-        _leftMealLabel = [UILabel new];
-        _leftMealLabel.textColor = [UIColor whiteColor];
-        _leftMealLabel.font = [UIFont fontWithName:@"Avenir-Book" size:15];
-        [_bottomBarBackgroundView addSubview:_leftMealLabel];
-
-        _favButton = [UIButton new];
-        [_favButton setImage:[UIImage imageNamed:@"FavIcon"] forState:UIControlStateNormal];
-        [_favButton addTarget:self action:@selector(_favButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_bottomBarBackgroundView addSubview:_favButton];
-
-        _commentButton = [UIButton new];
-        [_commentButton setImage:[UIImage imageNamed:@"CommentIcon"] forState:UIControlStateNormal];
-        [_commentButton addTarget:self action:@selector(_commentButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_bottomBarBackgroundView addSubview:_commentButton];
-
-        _shareButton = [UIButton new];
-        [_shareButton setImage:[UIImage imageNamed:@"FlowerIcon"] forState:UIControlStateNormal];
-        [_shareButton addTarget:self action:@selector(_shareButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-        [_bottomBarBackgroundView addSubview:_shareButton];
-
         self.contentView.backgroundColor = [UIColor greenColor];
     }
     return self;
@@ -118,23 +173,13 @@ static CGFloat const kBtnHPadding = 30;
     [super layoutSubviews];
 
     CGFloat canvasWith = CGRectGetWidth(self.bounds);
-    _mealImageView.frame = CGRectMake(0, 0, canvasWith, kMealImageViewHeight);
+
+    _mealView.frame = CGRectMake(0, 0, canvasWith, kMealImageViewHeight);
     _topBarBackgroundView.frame = CGRectMake(0, 0, canvasWith, kBarBackgroundViewHeight);
-    _bottomBarBackgroundView.frame = CGRectMake(0, kMealImageViewHeight - kBarBackgroundViewHeight, canvasWith, kBarBackgroundViewHeight);
-    _maskImageView.frame = CGRectMake(0, CGRectGetMinY(_bottomBarBackgroundView.frame) - kBarBackgroundViewHeight, canvasWith, kBarBackgroundViewHeight);
 
     _profileImageView.frame = CGRectMake(kProfileImageViewHPadding, kProfileImageViewVPadding, kProfileImageViewDimension, kProfileImageViewDimension);
     _userActionLabel.frame = CGRectMake(CGRectGetMaxX(_profileImageView.frame) + kProfileImageViewHPadding, kProfileImageViewVPadding, canvasWith - CGRectGetMaxX(_profileImageView.frame) - kProfileImageViewHPadding * 2, kActionLabelHeight);
     _mealsSharedlabel.frame = CGRectMake(CGRectGetMinX(_userActionLabel.frame), CGRectGetHeight(_topBarBackgroundView.frame) - kProfileImageViewVPadding - kActionLabelHeight, CGRectGetWidth(_userActionLabel.frame), kActionLabelHeight);
-
-    _pickUpDateLabel.frame = CGRectMake(kProfileImageViewHPadding, CGRectGetMinY(_bottomBarBackgroundView.frame) - kActionLabelHeight - kProfileImageViewVPadding, canvasWith - kProfileImageViewHPadding * 2, kActionLabelHeight);
-    _mealTitleLabel.frame = CGRectMake(kProfileImageViewHPadding, CGRectGetMidY(_pickUpDateLabel.frame) - kActionLabelHeight - kProfileImageViewVPadding, CGRectGetWidth(_pickUpDateLabel.frame), kActionLabelHeight);
-
-    _leftMealLabel.frame = CGRectMake(kLeftMealsLabelHPadding, (kBarBackgroundViewHeight - kActionLabelHeight) / 2, kLeftMealsLabelWidth, kActionLabelHeight);
-
-    _shareButton.frame = CGRectMake(canvasWith - kProfileImageViewHPadding - kBtnDimension, (kBarBackgroundViewHeight - kBtnDimension) / 2, kBtnDimension, kBtnDimension);
-    _commentButton.frame = CGRectMake(CGRectGetMinX(_shareButton.frame) - kBtnDimension - kBtnHPadding, CGRectGetMinY(_shareButton.frame), kBtnDimension, kBtnDimension);
-    _favButton.frame = CGRectMake(CGRectGetMinX(_commentButton.frame) - kBtnDimension - kBtnHPadding, CGRectGetMinY(_commentButton.frame), kBtnDimension, kBtnDimension);
 }
 
 + (CGFloat)heightForItem:(EHExploreMeal *)meal {
@@ -147,27 +192,14 @@ static CGFloat const kBtnHPadding = 30;
     [attributedAction appendAttributedString:[[NSAttributedString alloc] initWithString:@" is sharing her meal" attributes:[NSDictionary dictionaryWithObject:[UIFont fontWithName:@"Avenir-Book" size:15] forKey:NSFontAttributeName]]];
     _userActionLabel.attributedText = attributedAction;
     _mealsSharedlabel.text = [NSString stringWithFormat:@"%@ %@", @(meal.numberOfLeftMeals), @"meals shared"];
-    objc_setAssociatedObject(_mealTitleLabel, &EHMealImageURLKey, meal.mealImageURL, OBJC_ASSOCIATION_COPY);
-    _mealTitleLabel.text = meal.mealTitle;
-    _pickUpDateLabel.text = meal.pickUpDate;
-    _leftMealLabel.text = [NSString stringWithFormat:@"%@ %@", @(meal.numberOfLeftMeals), @"left"];
+
+    objc_setAssociatedObject(_mealView.mealTitleLabel, &EHMealImageURLKey, meal.mealImageURL, OBJC_ASSOCIATION_COPY);
+    _mealView.mealTitleLabel.text = meal.mealTitle;
+    _mealView.pickUpDateLabel.text = meal.pickUpDate;
+    _mealView.leftMealLabel.text = [NSString stringWithFormat:@"%@ %@", @(meal.numberOfLeftMeals), @"left"];
     _profileImageView.image = [UIImage imageNamed:@"User"];
-    _mealImageView.image = [UIImage imageNamed:@"Food"];
+    _mealView.mealImageView.image = [UIImage imageNamed:@"Food"];
     [self setNeedsLayout];
-}
-
-# pragma mark - Private methods
-
-- (void)_favButtonClicked:(UIButton *)button {
-    NSLog(@"faved");
-}
-
-- (void) _commentButtonClicked:(UIButton *)button {
-    NSLog(@"commented");
-}
-
-- (void)_shareButtonClicked:(UIButton *)button {
-    NSLog(@"shared");
 }
 
 @end
