@@ -7,10 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE0E84841C30E63A00D9F70A /* EHExploreMealCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E84831C30E63A00D9F70A /* EHExploreMealCellAdapter.m */; };
+		CE0E84851C30E63A00D9F70A /* EHExploreMealCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E84831C30E63A00D9F70A /* EHExploreMealCellAdapter.m */; };
+		CE0E84861C30E63A00D9F70A /* EHExploreMealCellAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E84831C30E63A00D9F70A /* EHExploreMealCellAdapter.m */; };
+		CE0E84E51C30F3A700D9F70A /* EHExploreStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E84E41C30F3A700D9F70A /* EHExploreStream.m */; };
+		CE0E84E61C30F3A700D9F70A /* EHExploreStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E84E41C30F3A700D9F70A /* EHExploreStream.m */; };
+		CE0E84E71C30F3A700D9F70A /* EHExploreStream.m in Sources */ = {isa = PBXBuildFile; fileRef = CE0E84E41C30F3A700D9F70A /* EHExploreStream.m */; };
 		CE1F81E41C2D5ED0007B4C57 /* EHExploreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F81E21C2D5ED0007B4C57 /* EHExploreViewController.m */; };
 		CE1F81E71C2D5F2C007B4C57 /* AFNetworking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1F81E51C2D5F2C007B4C57 /* AFNetworking.framework */; };
 		CE1F81E81C2D5F2C007B4C57 /* libAppKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CE1F81E61C2D5F2C007B4C57 /* libAppKit.a */; };
-		CE1F81EB1C2D61F1007B4C57 /* AKHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F81E91C2D61F1007B4C57 /* AKHttpClient.m */; };
+		CE1F81EB1C2D61F1007B4C57 /* EHHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F81E91C2D61F1007B4C57 /* EHHttpClient.m */; };
 		CE1F81F31C2D63D5007B4C57 /* UIColor+App.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1F81F21C2D63D5007B4C57 /* UIColor+App.m */; };
 		CE8BA16D1C2D7272009CAD86 /* EHExploreMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */; };
 		CE8BA16E1C2D7272009CAD86 /* EHExploreMeal.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA16C1C2D7272009CAD86 /* EHExploreMeal.m */; };
@@ -30,6 +36,9 @@
 		CE8BA1861C2D8B21009CAD86 /* EHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */; };
 		CE8BA1871C2D8B21009CAD86 /* EHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */; };
 		CE8BA1881C2D8B21009CAD86 /* EHRecipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */; };
+		CE8BA18C1C2D8D71009CAD86 /* EHExploreMealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA18B1C2D8D71009CAD86 /* EHExploreMealCell.m */; };
+		CE8BA18D1C2D8D71009CAD86 /* EHExploreMealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA18B1C2D8D71009CAD86 /* EHExploreMealCell.m */; };
+		CE8BA18E1C2D8D71009CAD86 /* EHExploreMealCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE8BA18B1C2D8D71009CAD86 /* EHExploreMealCell.m */; };
 		CE9976DB1C2D584300C2E688 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9976DA1C2D584300C2E688 /* main.m */; };
 		CE9976DE1C2D584300C2E688 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9976DD1C2D584300C2E688 /* AppDelegate.m */; };
 		CE9976E11C2D584300C2E688 /* EHMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE9976E01C2D584300C2E688 /* EHMainViewController.m */; };
@@ -57,12 +66,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE0E84811C30DF1F00D9F70A /* EHEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHEntity.h; sourceTree = "<group>"; };
+		CE0E84821C30E63A00D9F70A /* EHExploreMealCellAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreMealCellAdapter.h; sourceTree = "<group>"; };
+		CE0E84831C30E63A00D9F70A /* EHExploreMealCellAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreMealCellAdapter.m; sourceTree = "<group>"; };
+		CE0E84E31C30F3A700D9F70A /* EHExploreStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreStream.h; sourceTree = "<group>"; };
+		CE0E84E41C30F3A700D9F70A /* EHExploreStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreStream.m; sourceTree = "<group>"; };
 		CE1F81E21C2D5ED0007B4C57 /* EHExploreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreViewController.m; sourceTree = "<group>"; };
 		CE1F81E31C2D5ED0007B4C57 /* EHExploreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreViewController.h; sourceTree = "<group>"; };
 		CE1F81E51C2D5F2C007B4C57 /* AFNetworking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AFNetworking.framework; path = "../Submodules/AFNetworking/build/Debug-iphoneos/AFNetworking.framework"; sourceTree = "<group>"; };
 		CE1F81E61C2D5F2C007B4C57 /* libAppKit.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAppKit.a; path = "../Submodules/AppKit/build/Debug-iphoneos/libAppKit.a"; sourceTree = "<group>"; };
-		CE1F81E91C2D61F1007B4C57 /* AKHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AKHttpClient.m; sourceTree = "<group>"; };
-		CE1F81EA1C2D61F1007B4C57 /* AKHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AKHttpClient.h; sourceTree = "<group>"; };
+		CE1F81E91C2D61F1007B4C57 /* EHHttpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHHttpClient.m; sourceTree = "<group>"; };
+		CE1F81EA1C2D61F1007B4C57 /* EHHttpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHHttpClient.h; sourceTree = "<group>"; };
 		CE1F81F11C2D63D5007B4C57 /* UIColor+App.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+App.h"; sourceTree = "<group>"; };
 		CE1F81F21C2D63D5007B4C57 /* UIColor+App.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+App.m"; sourceTree = "<group>"; };
 		CE8BA16B1C2D7272009CAD86 /* EHExploreMeal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreMeal.h; sourceTree = "<group>"; };
@@ -77,6 +91,8 @@
 		CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHEvent.m; sourceTree = "<group>"; };
 		CE8BA1841C2D8B21009CAD86 /* EHRecipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHRecipe.h; sourceTree = "<group>"; };
 		CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHRecipe.m; sourceTree = "<group>"; };
+		CE8BA18A1C2D8D71009CAD86 /* EHExploreMealCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EHExploreMealCell.h; sourceTree = "<group>"; };
+		CE8BA18B1C2D8D71009CAD86 /* EHExploreMealCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EHExploreMealCell.m; sourceTree = "<group>"; };
 		CE9976D61C2D584300C2E688 /* Elkhorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elkhorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9976DA1C2D584300C2E688 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CE9976DC1C2D584300C2E688 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -121,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE0E84E21C30F38B00D9F70A /* Streams */ = {
+			isa = PBXGroup;
+			children = (
+				CE0E84E31C30F3A700D9F70A /* EHExploreStream.h */,
+				CE0E84E41C30F3A700D9F70A /* EHExploreStream.m */,
+			);
+			path = Streams;
+			sourceTree = "<group>";
+		};
 		CE1F81DF1C2D5EA3007B4C57 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,8 +158,8 @@
 		CE1F81E01C2D5EA3007B4C57 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				CE1F81EA1C2D61F1007B4C57 /* AKHttpClient.h */,
-				CE1F81E91C2D61F1007B4C57 /* AKHttpClient.m */,
+				CE1F81EA1C2D61F1007B4C57 /* EHHttpClient.h */,
+				CE1F81E91C2D61F1007B4C57 /* EHHttpClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -144,6 +169,10 @@
 			children = (
 				CE1F81E31C2D5ED0007B4C57 /* EHExploreViewController.h */,
 				CE1F81E21C2D5ED0007B4C57 /* EHExploreViewController.m */,
+				CE8BA18A1C2D8D71009CAD86 /* EHExploreMealCell.h */,
+				CE8BA18B1C2D8D71009CAD86 /* EHExploreMealCell.m */,
+				CE0E84821C30E63A00D9F70A /* EHExploreMealCellAdapter.h */,
+				CE0E84831C30E63A00D9F70A /* EHExploreMealCellAdapter.m */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -172,6 +201,7 @@
 				CE8BA1801C2D7BFB009CAD86 /* EHEvent.m */,
 				CE8BA1841C2D8B21009CAD86 /* EHRecipe.h */,
 				CE8BA1851C2D8B21009CAD86 /* EHRecipe.m */,
+				CE0E84811C30DF1F00D9F70A /* EHEntity.h */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -209,6 +239,7 @@
 		CE9976D81C2D584300C2E688 /* Elkhorn */ = {
 			isa = PBXGroup;
 			children = (
+				CE0E84E21C30F38B00D9F70A /* Streams */,
 				CE8BA16A1C2D71E1009CAD86 /* Modules */,
 				CE1F81DF1C2D5EA3007B4C57 /* Utils */,
 				CE1F81E11C2D5EA3007B4C57 /* Explore */,
@@ -382,15 +413,18 @@
 				CE9976E11C2D584300C2E688 /* EHMainViewController.m in Sources */,
 				CE8BA1721C2D7668009CAD86 /* EHExploreEvent.m in Sources */,
 				CE1F81F31C2D63D5007B4C57 /* UIColor+App.m in Sources */,
+				CE0E84E51C30F3A700D9F70A /* EHExploreStream.m in Sources */,
 				CE9976DE1C2D584300C2E688 /* AppDelegate.m in Sources */,
 				CE8BA1811C2D7BFB009CAD86 /* EHEvent.m in Sources */,
 				CE9976DB1C2D584300C2E688 /* main.m in Sources */,
 				CE8BA16D1C2D7272009CAD86 /* EHExploreMeal.m in Sources */,
-				CE1F81EB1C2D61F1007B4C57 /* AKHttpClient.m in Sources */,
+				CE1F81EB1C2D61F1007B4C57 /* EHHttpClient.m in Sources */,
 				CE8BA17C1C2D78FC009CAD86 /* EHMeal.m in Sources */,
 				CE1F81E41C2D5ED0007B4C57 /* EHExploreViewController.m in Sources */,
 				CE8BA1861C2D8B21009CAD86 /* EHRecipe.m in Sources */,
 				CE8BA1771C2D7869009CAD86 /* EHExploreRecipe.m in Sources */,
+				CE8BA18C1C2D8D71009CAD86 /* EHExploreMealCell.m in Sources */,
+				CE0E84841C30E63A00D9F70A /* EHExploreMealCellAdapter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,11 +433,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8BA1781C2D7869009CAD86 /* EHExploreRecipe.m in Sources */,
+				CE8BA18D1C2D8D71009CAD86 /* EHExploreMealCell.m in Sources */,
 				CE8BA1871C2D8B21009CAD86 /* EHRecipe.m in Sources */,
 				CE8BA1821C2D7BFB009CAD86 /* EHEvent.m in Sources */,
 				CE9976F41C2D584300C2E688 /* ElkhornTests.m in Sources */,
 				CE8BA17D1C2D78FC009CAD86 /* EHMeal.m in Sources */,
+				CE0E84851C30E63A00D9F70A /* EHExploreMealCellAdapter.m in Sources */,
 				CE8BA1731C2D7668009CAD86 /* EHExploreEvent.m in Sources */,
+				CE0E84E61C30F3A700D9F70A /* EHExploreStream.m in Sources */,
 				CE8BA16E1C2D7272009CAD86 /* EHExploreMeal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -413,11 +450,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE8BA1791C2D7869009CAD86 /* EHExploreRecipe.m in Sources */,
+				CE8BA18E1C2D8D71009CAD86 /* EHExploreMealCell.m in Sources */,
 				CE8BA1881C2D8B21009CAD86 /* EHRecipe.m in Sources */,
 				CE8BA1831C2D7BFB009CAD86 /* EHEvent.m in Sources */,
 				CE9976FF1C2D584300C2E688 /* ElkhornUITests.m in Sources */,
 				CE8BA17E1C2D78FC009CAD86 /* EHMeal.m in Sources */,
+				CE0E84861C30E63A00D9F70A /* EHExploreMealCellAdapter.m in Sources */,
 				CE8BA1741C2D7668009CAD86 /* EHExploreEvent.m in Sources */,
+				CE0E84E71C30F3A700D9F70A /* EHExploreStream.m in Sources */,
 				CE8BA16F1C2D7272009CAD86 /* EHExploreMeal.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

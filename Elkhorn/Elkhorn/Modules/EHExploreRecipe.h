@@ -17,6 +17,7 @@
 @property (nonatomic, readonly, copy, nonnull) NSString *recipeTitle;
 
 - (nonnull instancetype)init NS_UNAVAILABLE;
+
 - (nonnull instancetype)initWithJSONDictionary:(nonnull NSDictionary *)jsonDict NS_DESIGNATED_INITIALIZER;
 
 @end

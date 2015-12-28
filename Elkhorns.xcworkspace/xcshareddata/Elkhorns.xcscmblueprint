@@ -1,14 +1,17 @@
 {
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C78B00E7F718200ED3E812CDE6B00641DF29BAD7",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
 
   },
   "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
     "ACE7281F67218B98BE1B8CA8B80A5553A31E2B25" : 0,
+    "C78B00E7F718200ED3E812CDE6B00641DF29BAD7" : 0,
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : 0
   },
   "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "5463974C-419B-4FA8-A7E1-583AA97E0C82",
   "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
     "ACE7281F67218B98BE1B8CA8B80A5553A31E2B25" : "Elkhorns\/Submodules\/AppKit\/",
+    "C78B00E7F718200ED3E812CDE6B00641DF29BAD7" : "Elkhorns\/",
     "DD20A1A48C66B5213E0FEBB87A95EF51D6C6F3E8" : "Elkhorns\/Submodules\/AFNetworking\/"
   },
   "DVTSourceControlWorkspaceBlueprintNameKey" : "Elkhorns",
@@ -19,6 +22,11 @@
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lingguang1997\/AppKit.git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "ACE7281F67218B98BE1B8CA8B80A5553A31E2B25"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/lingguang1997\/Elkhorns.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C78B00E7F718200ED3E812CDE6B00641DF29BAD7"
     },
     {
       "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/AFNetworking\/AFNetworking.git",

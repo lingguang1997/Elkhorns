@@ -7,6 +7,9 @@
 //
 
 #import <AppKit/AKStream.h>
+#import "EHExploreMeal.h"
+#import "EHExploreMealCellAdapter.h"
+#import "EHExploreStream.h"
 #import "EHExploreViewController.h"
 
 @implementation EHExploreViewController
@@ -14,6 +17,8 @@
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     [self _setUpTabBarItem];
+
+    [self registerAdapter:[EHExploreMealCellAdapter new] forItemClass:[EHExploreMeal class]];
     return self;
 }
 
@@ -23,6 +28,16 @@
 }
 
 # pragma mark - AKStream
+
+- (EHExploreStream *)stream {
+    static EHExploreStream *exploreStream = nil;
+    static dispatch_once_t predicate;
+    dispatch_once(&predicate, ^{
+        exploreStream = [EHExploreStream new];
+        exploreStream.delegate = self;
+    });
+    return exploreStream;
+}
 
 - (void)streamDidUpdate {
     [super streamDidUpdate];
