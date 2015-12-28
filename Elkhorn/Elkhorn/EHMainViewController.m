@@ -18,16 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     [UITabBar appearance].tintColor = [UIColor appColor];
-    
+
     UITabBarController *tabBarController = [UITabBarController new];
 
     EHExploreViewController *exploreVC = [EHExploreViewController new];
     UINavigationController *exploreNC = [[UINavigationController alloc] initWithRootViewController:exploreVC];
 
     EHExploreViewController *exploreVC1 = [EHExploreViewController new];
-    
+
     tabBarController.viewControllers = @[exploreNC, exploreVC1];
     [self addChildViewController:tabBarController];
     [self.view addSubview:tabBarController.view];

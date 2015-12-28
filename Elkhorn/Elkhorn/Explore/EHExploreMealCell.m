@@ -25,6 +25,8 @@ static CGFloat const kLeftMealsLabelHPadding = 20;
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        self.selectionStyle = UITableViewCellSelectionStyleNone;
+
         _topBarBackgroundImageView = [UIImageView new];
         [self.contentView addSubview:_topBarBackgroundImageView];
 

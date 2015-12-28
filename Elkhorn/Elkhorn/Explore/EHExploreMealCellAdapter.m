@@ -9,16 +9,22 @@
 #import "EHExploreMeal.h"
 #import "EHExploreMealCell.h"
 #import "EHExploreMealCellAdapter.h"
+#import "EHMealViewController.h"
 
 @implementation EHExploreMealCellAdapter
 
-- (CGFloat)tableView:(UITableView *)tableView item:(EHExploreMeal *)meal heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)dataViewController:(AKDataViewController *)dataViewController item:(EHExploreMeal *)meal heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return [EHExploreMealCell heightForItem:meal];
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView item:(EHExploreMeal *)meal cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)dataViewController:(AKDataViewController *)dataViewController item:(EHExploreMeal *)meal cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EHExploreMealCell *cell = [[EHExploreMealCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:NSStringFromClass([EHExploreMealCell class])];
     return cell;
+}
+
+- (void)dataViewController:(AKDataViewController *)dataViewController item:(EHExploreMeal *)meal didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    EHMealViewController *mealVC = [EHMealViewController new];
+    [dataViewController.navigationController pushViewController:mealVC animated:YES];
 }
 
 @end

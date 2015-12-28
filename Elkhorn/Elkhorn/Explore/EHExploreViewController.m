@@ -16,6 +16,7 @@
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self.title = @"Explore";
     [self _setUpTabBarItem];
 
     [self registerAdapter:[EHExploreMealCellAdapter new] forItemClass:[EHExploreMeal class]];
@@ -46,7 +47,7 @@
 # pragma mark - Helpers
 
 - (void)_setUpTabBarItem {
-    UIImage *image = [UIImage imageNamed:@"tab_explore"];
+    UIImage *image = [UIImage imageNamed:@"TabExplore"];
     self.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Explore" image:image selectedImage:image];
 }
 
