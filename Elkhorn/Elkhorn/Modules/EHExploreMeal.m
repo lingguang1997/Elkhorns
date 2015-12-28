@@ -17,12 +17,13 @@
     return self;
 }
 
-- (instancetype)initWithProfileImageURL:(NSString *)profileImageURL username:(NSString *)username numberOfMealsShared:(NSInteger)numberOfMealsShared mealImageURL:(NSString *)mealImageURL mealTitle:(NSString *)mealTitle pickUpDate:(NSString *)pickUpDate numberOfLeftMeals:(NSString *)numberOfLeftMeals {
+- (instancetype)initWithMealID:(NSString *)mealID profileImageURL:(NSString *)profileImageURL username:(NSString *)username numberOfMealsShared:(NSInteger)numberOfMealsShared mealImageURL:(NSString *)mealImageURL mealTitle:(NSString *)mealTitle pickUpDate:(NSString *)pickUpDate numberOfLeftMeals:(NSInteger)numberOfLeftMeals {
     self = [super init];
     if (self) {
+        _mealID = mealID;
         _profileImageURL = profileImageURL;
         _username = username;
-        _numberOfLeftMeals = numberOfLeftMeals;
+        _numberOfMealsShared = numberOfMealsShared;
         _mealImageURL = mealImageURL;
         _mealTitle = mealTitle;
         _pickUpDate = pickUpDate;
@@ -32,7 +33,7 @@
 }
 
 + (instancetype)mockObject {
-    EHExploreMeal *meal = [[EHExploreMeal alloc] initWithProfileImageURL:@"" username:@"白素贞" numberOfMealsShared:10 mealImageURL:@"" mealTitle:@"Chicken over Rice" pickUpDate:@"Monday, Jul 4" numberOfLeftMeals:@"7"];
+    EHExploreMeal *meal = [[EHExploreMeal alloc] initWithMealID:@"123" profileImageURL:@"" username:@"白素贞" numberOfMealsShared:10 mealImageURL:@"" mealTitle:@"Chicken over Rice" pickUpDate:@"Monday, Jul 4" numberOfLeftMeals:21];
     return meal;
 }
 
